@@ -1,0 +1,45 @@
+<html>
+<head>
+    <title>Palmbot Chat Client</title>
+    <link rel="stylesheet" href="../style/style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
+</head>
+<body>
+    <div class="container">
+        <div class="container chat-container">
+            <div class="row">
+                <h2 class="ava-header">Palmbot</h2>
+            </div>
+            <div class="row">
+                <div class="chat-window">
+                    <div class="row">
+                        <div class="dialogue client-text">
+                            <span class="badge badge-primary">Hi, Rob</span>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="dialogue ava-text">
+                            <span class="badge badge-success">How can I help you?</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">Ask Palmbot</span>
+                    </div>
+                    <textarea class="form-control" placeholder="Ask a question. . . "></textarea>
+                </div>
+            </div>
+            <div class="row">
+                <button type="button" class="btn btn-primary send-button">Send</button>
+            </div>
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="../scripts/chat.js"></script>
+</body>
+</html>
