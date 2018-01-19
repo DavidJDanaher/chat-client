@@ -7,39 +7,51 @@
         crossorigin="anonymous">
 </head>
 <body>
-    <div class="container">
+    <div class="wrapper">
         <div class="container chat-container">
             <div class="row">
-                <h2 class="ava-header">Palmbot</h2>
+                <h1 class="ava-header">Robot Palmbot</h1>
+            </div>
+
+            <div class="row">
+                <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                    <label class="btn btn-primary active">
+                        <input type="radio" name="options" id="session" autocomplete="off"> Session
+                    </label>
+                    <label class="btn btn-primary">
+                        <input type="radio" name="options" id="token" autocomplete="off"> Token
+                    </label>
+                    <label class="btn btn-primary">
+                        <input type="radio" name="options" id="user" autocomplete="off"> User
+                    </label>
+                </div>
+
+                <div class="input-group mb-3">
+                    <div>
+                        <input type="text" class="form-control session-text" placeholder="Enter key...">
+                    </div>
+                    <div class="input-group-append">
+                        <button class="btn btn-primary session-button" type="button">Set</button>
+                    </div>
+                </div>
             </div>
             <div class="row">
                 <div class="chat-window">
-                    <div class="row">
-                        <div class="dialogue client-text">
-                            <span class="badge badge-primary">Hi, Rob</span>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="dialogue ava-text">
-                            <span class="badge badge-success">How can I help you?</span>
-                        </div>
-                    </div>
                 </div>
             </div>
             <div class="row">
                 <div class="input-group">
-                    <div class="input-group-prepend">
-                        <span class="input-group-text">Ask Palmbot</span>
-                    </div>
-                    <textarea class="form-control" placeholder="Ask a question. . . "></textarea>
+                    <textarea id="textarea" class="textarea form-control" placeholder="Ask a question. . . "></textarea>
                 </div>
-            </div>
-            <div class="row">
-                <button type="button" class="btn btn-primary send-button">Send</button>
+                <div class="input-group-append">
+                    <button type="button" class="btn btn-primary send-button">Send</button>
+                </div>
             </div>
         </div>
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <script src="../scripts/chat.js"></script>
 </body>
 </html>

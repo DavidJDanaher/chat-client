@@ -1,5 +1,9 @@
+.wrapper {
+    background-color: #F3F3F3;
+}
+
 .ava-header {
-    margin: 10px auto;
+    margin: 60px auto;
 }
 
 .chat-container {
@@ -11,21 +15,33 @@
 }
 
 .chat-window {
-    height: 500px;
+    height: 400px;
     width: 100%;
     border: solid 1px #AAA;
     border-radius: 5px;
+    background-color: #FFFFFF;
 }
 
 .dialogue {
+    margin: 5px;
+    border-radius: 15px;
+    color: #FFFFFF;
     padding: 10px;
 }
 
-.ava-text {
+.bot-text {
+    border-top-left-radius: 0;
+    background-color: #6ADF62;
     margin-left: 20px;
 }
 
 .client-text {
+    border-top-right-radius: 0;
     margin-left: auto;
+    background-color: #D662DF;
     margin-right: 20px;
+}
+
+.input-group {
+    margin-top: 20px;
 }
