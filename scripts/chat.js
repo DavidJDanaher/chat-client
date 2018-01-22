@@ -20,36 +20,38 @@ $(document).ready(function() {
 
     $('.send-button').on('click', function(event) {
         var text = $('#textarea').val();
+        var chatWindow = $('.chat-window');
 
-        $('.chat-window:last-child').append(getHtmlString(CLIENT_CLASS, text));
+        chatWindow.append(getHtmlString(CLIENT_CLASS, text));
+        chatWindow.scrollTop(chatWindow.height());
         $('#textarea').val('');
 
-        var settings = {
-            async: true,
-            crossDomain: true,
-                url: "https://ava-bot.cf-bdc-z2-dev.discover.com/question",
-                method: "POST",
-                headers: {
-                    requestId: "",
-                    contentType: "application/json",
-                    cacheControl: "no-cache",
-                },
-                processData: false,
-                data: {
-                    incomingMessage: text,
-                    user: {
-                        id: CLIENT_TOKEN,
-                        idType: SELECTED_ID_TYPE
-                    }
-                }
-        }
+        // var settings = {
+        //     async: true,
+        //     crossDomain: true,
+        //         url: "https://ava-bot.cf-bdc-z2-dev.discover.com/question",
+        //         method: "POST",
+        //         headers: {
+        //             requestId: "",
+        //             contentType: "application/json",
+        //             cacheControl: "no-cache",
+        //         },
+        //         processData: false,
+        //         data: {
+        //             incomingMessage: text,
+        //             user: {
+        //                 id: CLIENT_TOKEN,
+        //                 idType: SELECTED_ID_TYPE
+        //             }
+        //         }
+        // }
 
-        console.log(settings);
-
-        $.ajax(settings)
-            .done(function (response) {
-                $('.chat-window:last-child').append(getHtmlString(BOT_CLASS, response.message));
-            });
+        // console.log(settings);
+        //
+        // $.ajax(settings)
+        //     .done(function (response) {
+        //         $('.chat-window:last-child').append(getHtmlString(BOT_CLASS, response.message));
+        //     });
     });
 });
 
